@@ -49,11 +49,11 @@ export default function Navbar() {
           </div>
 
           <a
-            href="tel:+919876543210"
+            href="tel:+917702077239"
             className="flex items-center gap-2 text-xs sm:text-sm hover:text-orange-300 transition"
           >
             <Phone size={16} />
-            +91 XXXXXXXXXX
+            +91 7702077239
           </a>
 
         </div>

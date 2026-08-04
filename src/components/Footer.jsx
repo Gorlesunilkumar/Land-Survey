@@ -117,7 +117,7 @@ export default function Footer() {
                 />
 
                 <span>
-                  +91 XXXXXXXXXX
+                  +91 7702077239
                 </span>
 
               </div>
@@ -130,7 +130,7 @@ export default function Footer() {
                 />
 
                 <span className="break-all">
-                  info@srinusurveysolutions.com
+                  gsreenu2015@gmail.com
                 </span>
 
               </div>

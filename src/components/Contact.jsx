@@ -55,10 +55,10 @@ export default function Contact() {
                 </h3>
 
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917702077239"
                   className="text-gray-600 hover:text-[#FF9800] transition"
                 >
-                  +91 98765 43210
+                  +91 7702077239
                 </a>
 
               </div>
@@ -80,7 +80,7 @@ export default function Contact() {
                 </h3>
 
                 <p className="text-gray-600 break-all">
-                  info@srinusurveysolutions.com
+                  gsreenu2015@gmail.com
                 </p>
 
               </div>
@@ -116,7 +116,7 @@ export default function Contact() {
             {/* WhatsApp */}
 
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/917702077239"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 hover:scale-105 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"

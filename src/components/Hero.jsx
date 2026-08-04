@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
             <a
-              href="tel:+919876543210"
+              href="tel:+917702077239"
               className="bg-[#FF9800] hover:bg-orange-600 text-white px-6 py-4 rounded-xl flex items-center justify-center gap-3 font-semibold transition-all duration-300 hover:scale-105"
             >
               <Phone size={20} />
@@ -80,7 +80,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/917702077239"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl flex items-center justify-center gap-3 font-semibold transition-all duration-300 hover:scale-105"
