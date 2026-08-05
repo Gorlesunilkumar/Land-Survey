@@ -16,7 +16,7 @@ export default function Contact() {
         {/* Heading */}
 
         <div className="text-center max-w-3xl mx-auto">
-
+ 
           <span className="text-[#FF9800] uppercase tracking-widest font-semibold text-sm sm:text-base">
             Contact Us
           </span>
@@ -40,8 +40,6 @@ export default function Contact() {
 
           <div className="space-y-8">
 
-            {/* Phone */}
-
             <div className="flex items-start gap-4">
 
               <div className="bg-[#0F4C81] p-4 rounded-2xl flex-shrink-0">
@@ -58,14 +56,12 @@ export default function Contact() {
                   href="tel:+917702077239"
                   className="text-gray-600 hover:text-[#FF9800] transition"
                 >
-                  +91 7702077239
+                  +91 77020 77239
                 </a>
 
               </div>
 
             </div>
-
-            {/* Email */}
 
             <div className="flex items-start gap-4">
 
@@ -86,8 +82,6 @@ export default function Contact() {
               </div>
 
             </div>
-
-            {/* Address */}
 
             <div className="flex items-start gap-4">
 
@@ -113,8 +107,6 @@ export default function Contact() {
 
             </div>
 
-            {/* WhatsApp */}
-
             <a
               href="https://wa.me/917702077239"
               target="_blank"
@@ -134,36 +126,41 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full border rounded-xl p-4 outline-none focus:ring-2 focus:ring-[#0F4C81]"
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
             />
 
             <input
               type="tel"
               placeholder="Phone Number"
-              className="w-full border rounded-xl p-4 outline-none focus:ring-2 focus:ring-[#0F4C81]"
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
             />
 
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full border rounded-xl p-4 outline-none focus:ring-2 focus:ring-[#0F4C81]"
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
             />
 
             <select
-              className="w-full border rounded-xl p-4 outline-none focus:ring-2 focus:ring-[#0F4C81]"
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-700 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
+              defaultValue=""
             >
-              <option>Select Survey Type</option>
+              <option value="" disabled>
+                Select Survey Type
+              </option>
+
               <option>Boundary Survey</option>
               <option>Land Measurement</option>
               <option>Plot Layout</option>
               <option>Agricultural Survey</option>
               <option>Other</option>
+
             </select>
 
             <textarea
               rows="5"
               placeholder="Your Message"
-              className="w-full border rounded-xl p-4 outline-none focus:ring-2 focus:ring-[#0F4C81]"
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
             ></textarea>
 
             <button
