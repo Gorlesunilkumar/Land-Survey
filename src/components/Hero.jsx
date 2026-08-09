@@ -17,8 +17,8 @@ export default function Hero() {
         backgroundImage: `url(${hero})`,
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/50"></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40"></div>
 
       <div className="relative max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28">
 
@@ -71,6 +71,8 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
+            {/* Call */}
+
             <a
               href="tel:+917702077239"
               className="bg-[#FF9800] hover:bg-orange-600 text-white px-6 py-4 rounded-xl flex items-center justify-center gap-3 font-semibold transition-all duration-300 hover:scale-105"
@@ -78,6 +80,8 @@ export default function Hero() {
               <Phone size={20} />
               Call Now
             </a>
+
+            {/* WhatsApp */}
 
             <a
               href="https://wa.me/917702077239"

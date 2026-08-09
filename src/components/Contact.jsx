@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Phone,
   Mail,
@@ -6,6 +7,38 @@ import {
 } from "lucide-react";
 
 export default function Contact() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    setResult("Sending...");
+
+    const formData = new FormData(event.target);
+
+    formData.append(
+      "access_key",
+      "60a22dde-2923-41f0-97d9-ed8f4b2ed34e"
+    );
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("✅ Enquiry sent successfully!");
+      event.target.reset();
+    } else {
+      setResult("❌ Failed to send enquiry. Please try again.");
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -16,7 +49,7 @@ export default function Contact() {
         {/* Heading */}
 
         <div className="text-center max-w-3xl mx-auto">
- 
+
           <span className="text-[#FF9800] uppercase tracking-widest font-semibold text-sm sm:text-base">
             Contact Us
           </span>
@@ -32,29 +65,27 @@ export default function Contact() {
 
         </div>
 
-        {/* Contact Section */}
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mt-14">
 
-          {/* Left Side */}
+          {/* Left */}
 
           <div className="space-y-8">
 
             <div className="flex items-start gap-4">
 
-              <div className="bg-[#0F4C81] p-4 rounded-2xl flex-shrink-0">
+              <div className="bg-[#0F4C81] p-4 rounded-2xl">
                 <Phone className="text-white" />
               </div>
 
               <div>
 
-                <h3 className="font-bold text-lg sm:text-xl">
+                <h3 className="font-bold text-lg">
                   Phone
                 </h3>
 
                 <a
                   href="tel:+917702077239"
-                  className="text-gray-600 hover:text-[#FF9800] transition"
+                  className="text-gray-600 hover:text-[#FF9800]"
                 >
                   +91 77020 77239
                 </a>
@@ -65,13 +96,13 @@ export default function Contact() {
 
             <div className="flex items-start gap-4">
 
-              <div className="bg-[#0F4C81] p-4 rounded-2xl flex-shrink-0">
+              <div className="bg-[#0F4C81] p-4 rounded-2xl">
                 <Mail className="text-white" />
               </div>
 
               <div>
 
-                <h3 className="font-bold text-lg sm:text-xl">
+                <h3 className="font-bold text-lg">
                   Email
                 </h3>
 
@@ -85,13 +116,13 @@ export default function Contact() {
 
             <div className="flex items-start gap-4">
 
-              <div className="bg-[#0F4C81] p-4 rounded-2xl flex-shrink-0">
+              <div className="bg-[#0F4C81] p-4 rounded-2xl">
                 <MapPin className="text-white" />
               </div>
 
               <div>
 
-                <h3 className="font-bold text-lg sm:text-xl">
+                <h3 className="font-bold text-lg">
                   Office
                 </h3>
 
@@ -111,7 +142,7 @@ export default function Contact() {
               href="https://wa.me/917702077239"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 hover:scale-105 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+              className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition"
             >
               <MessageCircle size={22} />
               Chat on WhatsApp
@@ -119,31 +150,42 @@ export default function Contact() {
 
           </div>
 
-          {/* Contact Form */}
+          {/* Right */}
 
-          <form className="bg-[#F8FAFC] rounded-3xl shadow-xl p-6 sm:p-8 space-y-5">
+          <form
+            onSubmit={onSubmit}
+            className="bg-[#F8FAFC] rounded-3xl shadow-xl p-6 sm:p-8 space-y-5"
+          >
 
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
-              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
+              required
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81]"
             />
 
             <input
               type="tel"
+              name="phone"
               placeholder="Phone Number"
-              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
+              required
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81]"
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
-              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
+              required
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81]"
             />
 
             <select
-              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-700 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
+              name="survey"
+              required
               defaultValue=""
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-700 outline-none focus:ring-2 focus:ring-[#0F4C81]"
             >
               <option value="" disabled>
                 Select Survey Type
@@ -159,16 +201,22 @@ export default function Contact() {
 
             <textarea
               rows="5"
+              name="message"
               placeholder="Your Message"
-              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81] focus:border-[#0F4C81]"
+              required
+              className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-[#0F4C81]"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full bg-[#FF9800] hover:bg-orange-600 hover:scale-[1.02] text-white py-4 rounded-xl font-semibold transition-all duration-300"
+              className="w-full bg-[#FF9800] hover:bg-orange-600 text-white py-4 rounded-xl font-semibold transition"
             >
               Send Enquiry
             </button>
+
+            <p className="text-center font-medium text-green-600">
+              {result}
+            </p>
 
           </form>
 

@@ -5,7 +5,6 @@ import {
   Trees,
   MapPinned,
   FileText,
-  ArrowRight,
 } from "lucide-react";
 
 const services = [
@@ -57,7 +56,7 @@ export default function Services() {
 
         {/* Heading */}
 
-        <div className="text-center">
+        <div className="text-center max-w-3xl mx-auto">
 
           <span className="text-[#FF9800] uppercase tracking-widest font-semibold text-sm sm:text-base">
             Our Services
@@ -67,7 +66,7 @@ export default function Services() {
             Professional Surveying Services
           </h2>
 
-          <p className="mt-5 max-w-3xl mx-auto text-gray-600 text-base sm:text-lg leading-7 sm:leading-8">
+          <p className="mt-5 text-gray-600 text-base sm:text-lg leading-7 sm:leading-8">
             We provide reliable and affordable land surveying services
             using traditional surveying methods with a strong commitment
             to accuracy and customer satisfaction.
@@ -75,7 +74,7 @@ export default function Services() {
 
         </div>
 
-        {/* Cards */}
+        {/* Service Cards */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12 lg:mt-16">
 
@@ -86,24 +85,23 @@ export default function Services() {
               className="group bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
             >
 
+              {/* Icon */}
+
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#0F4C81] text-white flex items-center justify-center group-hover:bg-[#FF9800] transition-colors duration-300">
                 {service.icon}
               </div>
+
+              {/* Title */}
 
               <h3 className="mt-6 text-xl sm:text-2xl font-bold text-[#0F4C81]">
                 {service.title}
               </h3>
 
+              {/* Description */}
+
               <p className="mt-4 text-gray-600 leading-7">
                 {service.description}
               </p>
-
-              <button
-                className="mt-6 flex items-center gap-2 text-[#FF9800] font-semibold hover:gap-3 transition-all"
-              >
-                Learn More
-                <ArrowRight size={18} />
-              </button>
 
             </div>
 
