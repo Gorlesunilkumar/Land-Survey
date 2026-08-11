@@ -41,6 +41,7 @@ export default function Hero() {
 
           </div>
 
+
           {/* Heading */}
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
@@ -57,6 +58,7 @@ export default function Hero() {
 
           </h1>
 
+
           {/* Description */}
 
           <p className="mt-6 text-base sm:text-lg text-gray-200 leading-7 sm:leading-8 max-w-2xl">
@@ -67,6 +69,7 @@ export default function Hero() {
 
           </p>
 
+
           {/* Buttons */}
 
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
@@ -74,17 +77,18 @@ export default function Hero() {
             {/* Call */}
 
             <a
-              href="tel:+917702077239"
+              href="tel:+919951901218"
               className="bg-[#FF9800] hover:bg-orange-600 text-white px-6 py-4 rounded-xl flex items-center justify-center gap-3 font-semibold transition-all duration-300 hover:scale-105"
             >
               <Phone size={20} />
               Call Now
             </a>
 
+
             {/* WhatsApp */}
 
             <a
-              href="https://wa.me/917702077239"
+              href="https://wa.me/919951901218"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl flex items-center justify-center gap-3 font-semibold transition-all duration-300 hover:scale-105"
@@ -94,6 +98,7 @@ export default function Hero() {
             </a>
 
           </div>
+
 
           {/* Features */}
 

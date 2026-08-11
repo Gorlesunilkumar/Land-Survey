@@ -84,10 +84,10 @@ export default function Contact() {
                 </h3>
 
                 <a
-                  href="tel:+917702077239"
+                  href="tel:+919951901218"
                   className="text-gray-600 hover:text-[#FF9800]"
                 >
-                  +91 77020 77239
+                  +91 99519 01218
                 </a>
 
               </div>
@@ -139,7 +139,7 @@ export default function Contact() {
             </div>
 
             <a
-              href="https://wa.me/917702077239"
+              href="https://wa.me/919951901218"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition"

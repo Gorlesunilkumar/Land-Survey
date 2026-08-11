@@ -49,16 +49,17 @@ export default function Navbar() {
           </div>
 
           <a
-            href="tel:+917702077239"
+            href="tel:+919951901218"
             className="flex items-center gap-2 text-xs sm:text-sm hover:text-orange-300 transition"
           >
             <Phone size={16} />
-            +91 7702077239
+            +91 99519 01218
           </a>
 
         </div>
 
       </div>
+
 
       {/* Main Navbar */}
 
@@ -99,6 +100,7 @@ export default function Navbar() {
 
           </a>
 
+
           {/* Desktop Navigation */}
 
           <nav className="hidden md:flex items-center gap-8">
@@ -115,6 +117,7 @@ export default function Navbar() {
 
           </nav>
 
+
           {/* Desktop Quote Button */}
 
           <a
@@ -123,6 +126,7 @@ export default function Navbar() {
           >
             Get Quote
           </a>
+
 
           {/* Mobile Menu Button */}
 
@@ -134,6 +138,7 @@ export default function Navbar() {
           </button>
 
         </div>
+
 
         {/* Mobile Navigation */}
 

@@ -27,6 +27,7 @@ export default function Footer() {
 
           </div>
 
+
           {/* Quick Links */}
 
           <div>
@@ -77,6 +78,7 @@ export default function Footer() {
 
           </div>
 
+
           {/* Services */}
 
           <div>
@@ -99,6 +101,7 @@ export default function Footer() {
 
           </div>
 
+
           {/* Contact */}
 
           <div>
@@ -109,6 +112,8 @@ export default function Footer() {
 
             <div className="space-y-4">
 
+              {/* Phone */}
+
               <div className="flex items-start gap-3">
 
                 <Phone
@@ -116,11 +121,17 @@ export default function Footer() {
                   className="mt-1 flex-shrink-0"
                 />
 
-                <span>
-                  +91 7702077239
-                </span>
+                <a
+                  href="tel:+919951901218"
+                  className="hover:text-[#FF9800] transition"
+                >
+                  +91 99519 01218
+                </a>
 
               </div>
+
+
+              {/* Email */}
 
               <div className="flex items-start gap-3">
 
@@ -134,6 +145,9 @@ export default function Footer() {
                 </span>
 
               </div>
+
+
+              {/* Address */}
 
               <div className="flex items-start gap-3">
 
@@ -159,6 +173,7 @@ export default function Footer() {
         </div>
 
       </div>
+
 
       {/* Bottom */}
 
